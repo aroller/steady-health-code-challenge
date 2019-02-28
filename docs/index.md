@@ -1,4 +1,4 @@
-# The future home of a wiki.
+# Welcome to the wiki.
 
-* Cunningham
-* Wiki
+* [Cunningham](Cunningham.md)
+* [Wiki](Wiki.md)
