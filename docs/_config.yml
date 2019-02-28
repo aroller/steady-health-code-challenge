@@ -4,3 +4,5 @@ description: Demonstration of Aaron Roller's coding skills.
 
 theme: jekyll-theme-hacker
 baseurl: /steady-health-code-challenge
+
+toc-title: Table of Contents
