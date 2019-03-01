@@ -33,4 +33,3 @@ class PageRendererTest(unittest.TestCase):
         rend = PageRenderer(toc=toc)
         self.assertEqual("Stuff is [Junk](junk.md).", rend.transform("Stuff is Junk."))
 
-    
