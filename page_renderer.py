@@ -1,6 +1,6 @@
 import re
 
-from wiki.pages import Pages
+from pages import Pages
 
 
 class PageRenderer:

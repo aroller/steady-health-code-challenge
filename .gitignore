@@ -1,3 +1,4 @@
 .DS_Store
 .idea/*
 wiki/__pycache__
+__pycache__

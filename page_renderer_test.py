@@ -1,8 +1,8 @@
 import unittest
 from unittest.mock import MagicMock
 
-from wiki.page_renderer import PageRenderer
-from wiki.pages import Pages
+from page_renderer import PageRenderer
+from pages import Pages
 
 
 def return_true_if_param_is_junk(word: str):
@@ -32,3 +32,7 @@ class PageRendererTest(unittest.TestCase):
         toc.word_matches_a_page = return_true_if_param_is_junk
         rend = PageRenderer(toc=toc)
         self.assertEqual("Stuff is [Junk](junk.md).", rend.transform("Stuff is Junk."))
+
+
+if __name__ == '__main__':
+    unittest.main()

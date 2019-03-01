@@ -1,7 +1,7 @@
 import unittest
 
-from wiki.system_config import SystemConfig
-from wiki.pages import Pages
+from system_config import SystemConfig
+from pages import Pages
 
 
 class PagesTest(unittest.TestCase):
@@ -15,7 +15,7 @@ class PagesTest(unittest.TestCase):
 
     def test_path_to_page(self):
         path = self._toc.page_path("Junk")
-        self.assertEqual(path, "../pages/Junk.txt")
+        self.assertEqual(path, "pages/Junk.txt")
 
     def test_page_wiki_exists(self):
         self.assertTrue(self._toc.word_matches_a_page("Wiki"))
@@ -31,3 +31,7 @@ class PagesTest(unittest.TestCase):
         self.assertIn("Wiki.txt", pages)
         self.assertIn("Nelson.txt", pages)
         self.assertIn("Cunningham.txt", pages)
+
+
+if __name__ == '__main__':
+    unittest.main()

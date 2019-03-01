@@ -1,6 +1,6 @@
-from wiki.page_renderer import PageRenderer
-from wiki.system_config import SystemConfig
-from wiki.pages import Pages
+from page_renderer import PageRenderer
+from system_config import SystemConfig
+from pages import Pages
 
 
 def generate_wiki():
