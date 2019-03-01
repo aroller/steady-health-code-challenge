@@ -5,4 +5,4 @@ A [Hyperlink](hyperlink.md) points to a whole document or to a specific element 
 
 [Hypertext](hypertext.md) is text with hyperlinks.
 
-The term was coined by Ted [Nelson](nelson.md) at the start of Project Xanadu.
+The term was coined by Ted [Nelson](nelson.md) at the start of Project [Xanadu](xanadu.md).

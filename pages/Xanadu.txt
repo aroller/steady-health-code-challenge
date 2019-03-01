@@ -1,0 +1,4 @@
+Project Xanadu was the first hypertext project, founded in 1960 by Ted Nelson.
+
+Administrators of Project Xanadu have declared it an improvement over the World Wide Web,
+with mission statement: "Today's popular software simulates paper.

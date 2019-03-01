@@ -4,6 +4,6 @@ with references ([Hyperlink](hyperlink.md)) to other text that the reader can im
 [Hypertext](hypertext.md) documents are interconnected by hyperlinks, which are typically activated by a mouse click,
 keypress set or by touching the screen.
 
-The term [Hypertext](hypertext.md) was coined by Ted [Nelson](nelson.md) at the start of Project Xanadu.
+The term [Hypertext](hypertext.md) was coined by Ted [Nelson](nelson.md) at the start of Project [Xanadu](xanadu.md).
 
 A [Wiki](wiki.md) uses [Hyperlink](hyperlink.md) and [Hypertext](hypertext.md) to connect data.
