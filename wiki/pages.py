@@ -2,7 +2,7 @@ import os
 from typing import List
 
 
-class TableOfContents:
+class Pages:
     """Knows about all of the pages participating in the wiki.
     """
 
@@ -22,7 +22,7 @@ class TableOfContents:
             :param word found in the text of a page that may match the title of a page...must match case and spaces exactly
             :returns path to the potential page
         """
-        return "{path}/{page}".format(path=self._path_to_pages, page=TableOfContents.page_filename(word))
+        return "{path}/{page}".format(path=self._path_to_pages, page=Pages.page_filename(word))
 
     @staticmethod
     def page_filename(word: str) -> str:
@@ -32,5 +32,3 @@ class TableOfContents:
     def all_page_filenames(self) -> List[str]:
         """:returns all known source pages found in the path_to_pages."""
         return os.listdir(self._path_to_pages)
-
-

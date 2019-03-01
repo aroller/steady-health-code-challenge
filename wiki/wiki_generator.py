@@ -1,19 +1,19 @@
 from wiki.page_renderer import PageRenderer
 from wiki.system_config import SystemConfig
-from wiki.table_of_contents import TableOfContents
+from wiki.pages import Pages
 
 
 def generate_wiki():
     """Reads each page in the pages directory and writes a markup page in the docs directory that will contain
     text that will link to other pages if they match the words. Also creates a table of contents ."""
-    toc = TableOfContents(SystemConfig.pages_path())
+    pages = Pages(SystemConfig.pages_path())
 
     index_file = open("{path}/index.md".format(path=SystemConfig.docs_path()), "w+")
     index_file.write("# Table of Contents\n")
 
-    for page_filename in toc.all_page_filenames():
+    for page_filename in pages.all_page_filenames():
         contents = read_contents(page_filename)
-        write_contents(contents, page_filename, toc)
+        write_contents(contents, page_filename, pages)
         write_to_index(page_filename, index_file)
 
     index_file.close()

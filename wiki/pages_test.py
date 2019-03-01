@@ -1,17 +1,17 @@
 import unittest
 
 from wiki.system_config import SystemConfig
-from wiki.table_of_contents import TableOfContents
+from wiki.pages import Pages
 
 
-class TableOfContentsTest(unittest.TestCase):
+class PagesTest(unittest.TestCase):
 
     def __init__(self, method_name):
         super().__init__(method_name)
-        self._toc = TableOfContents(SystemConfig.pages_path())
+        self._toc = Pages(SystemConfig.pages_path())
 
     def test_page_filename(self):
-        self.assertEqual(TableOfContents.page_filename("Somewhere"), "Somewhere.txt")
+        self.assertEqual(Pages.page_filename("Somewhere"), "Somewhere.txt")
 
     def test_path_to_page(self):
         path = self._toc.page_path("Junk")
@@ -25,7 +25,6 @@ class TableOfContentsTest(unittest.TestCase):
 
     def test_nothing_does_not_exist(self):
         self.assertFalse(self._toc.word_matches_a_page("Nothing"))
-
 
     def test_pages_are_in_all_pages(self):
         pages = self._toc.all_page_filenames()

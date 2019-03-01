@@ -2,7 +2,7 @@ import unittest
 from unittest.mock import MagicMock
 
 from wiki.page_renderer import PageRenderer
-from wiki.table_of_contents import TableOfContents
+from wiki.pages import Pages
 
 
 def return_true_if_param_is_junk(word: str):
@@ -21,15 +21,14 @@ class PageRendererTest(unittest.TestCase):
         self.assertEqual(PageRenderer.with_markup_link("Stuff"), "[Stuff](stuff.md)")
 
     def test_sentence_without_a_word_matching_a_page_is_unchanged(self):
-        toc = TableOfContents(path_to_pages="")
+        toc = Pages(path_to_pages="")
         toc.word_matches_a_page = MagicMock(return_value=False)
         rend = PageRenderer(toc=toc)
         sentence = "A cow jumps over 3 moons, so it must be on Jupiter? I think so. "
         self.assertEqual(sentence, rend.transform(sentence))
 
     def test_sentence_with_page_match_includes_markup_link(self):
-        toc = TableOfContents(path_to_pages="")
+        toc = Pages(path_to_pages="")
         toc.word_matches_a_page = return_true_if_param_is_junk
         rend = PageRenderer(toc=toc)
         self.assertEqual("Stuff is [Junk](junk.md).", rend.transform("Stuff is Junk."))
-
